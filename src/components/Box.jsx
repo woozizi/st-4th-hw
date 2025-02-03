@@ -5,7 +5,9 @@ import styled from "styled-components";
 const StyledBox = styled.div`
   width: 100px;
   height: 100px;
-  background-color: "gray";
+  background-color: ${(props) => {
+    return props.$active ? "blue" : "gray";
+  }};
   display: flex;
   align-items: center;
   justify-content: center;
